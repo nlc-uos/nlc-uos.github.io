@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Flexbox</title>
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center; /* 아이템들을 수직으로 가운데 정렬 */
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar .brand {
+            display: flex;
+            align-items: center; /* 이미지와 텍스트를 수직으로 가운데 정렬 */
+        }
+        .navbar .brand img {
+            height: 40px; /* 이미지 크기 조정 */
+            margin-right: 10px; /* 이미지와 텍스트 사이에 여백 추가 */
+        }
+        .navbar .nav-links {
+            display: flex;
+            margin-left: auto; /* 버튼들을 오른쪽으로 밀어냄 */
+        }
+        .navbar .nav-links a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">
+            <img src="your-image-url.jpg" alt="Brand Logo">
+            <span>NLP</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
