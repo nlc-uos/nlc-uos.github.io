@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Language Computing Laboratory @ University of Seoul</title>
+  <link rel="icon" type="image/jpg" href="/images/uos_icon.jpg">
+  <meta name="description" content="NLC Lab @ UoS">
+  <link href="./github-light.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+    }
+        
+    .header {
+            background-image: url('images/home2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    .header h1 {
+        margin: 0;
+        font-size: 5em;
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        
+    }
+
+    .header h2 {
+        margin: 0;
+        font-size: 2em;
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+    }
+
+    .header .line {
+            width: 630px;
+            height: 6px;
+            background-color: rgb(255, 255, 255);
+            margin: 50px 0;
+    }
+
+    /* .content-container {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-style: normal;
+      margin-left: 20%;
+      margin-right: 20%;
+    } */
+
+    .content-container {
+      /* font-family: "Roboto Mono";
+      font-weight: 300; */
+      font-family: "Poppins";
+      font-weight: 400;
+      margin-left: 20%;
+      margin-right: 20%;
+      font-size: 17px;
+      color: rgb(102, 94, 94);
+    }
+
+    span {
+      font-family: "Merriweather";
+      font-weight: 700;
+      font-style: normal;
+    }
+
+
+    .navbar-container {
+      width: 100%;
+      background-color: rgb(255, 255, 255); 
+    }
+
+    .navbar {
+      width: 85%; 
+      max-width: 100%;
+      margin: 0 auto;
+      /* margin-right: 10%;  */
+      color: rgb(24, 23, 23);
+      height: 2cm;
+      display: flex;
+      align-items: center; /* 아이템들을 수직으로 가운데 정렬 */
+      /* padding: 10px; */
+    }
+    .navbar .brand {
+      display: flex;
+      align-items: center; /* 이미지와 텍스트를 수직으로 가운데 정렬 */
+      margin-left: 20px; /* 이미지와 텍스트 사이에 여백 추가 */
+    }
+
+    .navbar .brand p {
+      font-family: "Merriweather";
+      font-size: 24px;
+      color: rgb(68, 96, 173);
+    }
+
+    .navbar .brand img {
+        height: 30px; /* 이미지 크기 조정 */
+        margin-right: 30px; /* 이미지와 텍스트 사이에 여백 추가 */
+    }
+    .navbar .nav-links {
+        display: flex;
+        margin-left: auto; /* 버튼들을 오른쪽으로 밀어냄 */
+        gap: 20px;
+    }
+    .navbar .nav-links a {
+        color: rgb(24, 23, 23);
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    #bottom-container {
+      width: 100%;
+      background-color: rgb(61, 61, 61); 
+      height: 3cm;
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.692);
+      line-height: 80%;
+    }
+
+    #bottom-navbar {
+      margin-left: 30%;
+    }
+
+    #footer-container {
+      width: 100%;
+      background-color: rgb(0, 0, 0); /* 배경색을 로얄블루로 변경 */
+    }
+
+    #footer-navbar {
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: black; 
+      height: 1cm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.692);
+      font-size: 1em;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- University Symbol -->
+  <div class="navbar-container">
+    <div class="navbar">
+      <div class="brand">
+          <img src="images/uos_icon2.png" alt="University Symbol"  style="width: 70px; height: auto;"> 
+          <p>NLC Lab @UOS</p>
+      </div>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="members.html">Members</a>
+          <a href="research.html">Research</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Hiring</a>
+      </div>
+    </div> 
+
+
+    <div class="header">
+      <h1>Welcome to NLC Lab</h1>
+      <div class="line"></div>
+      <h2>Natural Language Computing Lab</h2>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <br>
+    <h1><span>Natural Language Computing Laboratory</span> </h1>
+    <p>Our NLC lab focuses on research of Large Language Models and Generative Artifical Intelligence.</p>
+          
+
+    <br><hr>
+    <h2><span>Now Hiring</span></h2>
+    <ul>
+      <li>Our research group is seeking motivated students (MS/PhD) to join our team. </br></li>
+      <p>We offer the necessary mentoring and support to help you achieve your research goals (publishing research papers in top-tier conferences).</br></p>
+      <p>If you are interested in becoming a part of our team, we encourage you to contact us at [kyungjae.lee@uos.ac.kr]. We look forward to learning more about your research interests and experiences.
+      </br></p>
+    </ul>
+
+    <br><hr>
+    <h2><span>News</span></h2>
+    <ul>
+      <li>Natural Language Computing Laboratory begins! (2024-03-01)</li>
+    </ul>
+
+    <br><hr>
+    <h2><span>Research Area</span></h2>
+    <ul>
+      <li>We are now working on the following research topics. Please feel free to contact us if you are interested in working on one of these research topics.
+      </br></li>
+      <ul>
+        <li>Self-Evolving LLM, LLM as a Judge, Self-Correction</li>
+        <li>Trustworthy LLM, Hallucination, Factuality, Consistency</li>
+        <li>Agentic LLM Workflow, Mixture of Experts</li>
+      </ul>
+      
+    </ul>
+    <br><hr>
+
+  </div> 
+
+  <!-- Bottom Navbar -->
+  <div id="bottom-container">
+    <div id="bottom-navbar">
+      <ul>
+        <p>Information and Technology Building 304</br></p>
+        <p>University of Seoul, 163 Seoulsiripdaero, Dongdaemun-gu, Seoul 02504, South Korea</p>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Navbar -->
+  <div id="footer-container">
+    <div id="footer-navbar">
+      <div class="copyright">Copyright 2024, Natural Language Computing Lab, Department of Computer Science at The University of SEOUL.</div>
+            
+    </div>
+  </div>
+
+
+</body>
+</html>
