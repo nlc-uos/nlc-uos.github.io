@@ -164,6 +164,123 @@
       margin-bottom: 0;
     }
 
+
+    /* 1) 전역: 박스 크기 계산 안정화 */
+    *, *::before, *::after { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+
+    /* 2) 모바일/태블릿 대응 */
+    @media (max-width: 768px) {
+      /* 컨텐츠: 20% 마진 -> 모바일에서는 패딩 기반으로 */
+      .content-container {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 16px;
+        font-size: 16px;
+      }
+
+      /* 상단 네비게이션: 한 줄 고정 -> 줄바꿈/세로 배치 */
+      .navbar {
+        width: 100%;
+        height: auto;            /* 2cm 고정 높이 해제 */
+        padding: 12px 16px;
+        flex-direction: column;  /* 세로 배치 */
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar .brand {
+        margin-left: 0;
+      }
+
+      .navbar .brand img {
+        width: 54px;             /* 모바일에서 로고 약간 축소 */
+        margin-right: 12px;
+      }
+
+      .navbar .brand p {
+        font-size: 18px;
+      }
+
+      .navbar .nav-links {
+        width: 100%;
+        margin-left: 0;
+        gap: 8px;
+        flex-wrap: wrap;         /* 줄바꿈 허용 */
+      }
+
+      .navbar .nav-links a {
+        padding: 10px 12px;
+        font-size: 1rem;
+      }
+
+      /* 헤더(배경 이미지 영역): 고정 500px + 큰 글씨 -> clamp로 유연하게 */
+      .header {
+        height: min(420px, 55vh);
+        padding: 24px 16px;
+      }
+
+      .header h1 {
+        font-size: clamp(28px, 7vw, 44px);
+        text-align: center;
+      }
+
+      .header h2 {
+        font-size: clamp(16px, 4.5vw, 22px);
+        text-align: center;
+      }
+
+      .header .line {
+        width: min(80vw, 630px); /* 630px 고정 -> 화면에 맞추기 */
+        height: 4px;
+        margin: 20px 0;
+      }
+
+      /* 하단 영역: margin-left:30% -> 0, 높이 고정 -> 자동 */
+      #bottom-container {
+        height: auto;            /* 3cm 고정 높이 해제 */
+        padding: 16px;
+      }
+
+      #bottom-navbar {
+        margin-left: 0;
+      }
+
+      #footer-navbar {
+        height: auto;            /* 1cm 고정 높이 해제 */
+        padding: 10px 16px;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      /* ===== 모바일: 가로 스와이프 네비게이션 ===== */
+      @media (max-width: 768px) {
+        .navbar .nav-links{
+          display: flex;                /* 혹시 숨겨져 있으면 강제 표시 */
+          flex-wrap: nowrap;            /* ❗ 줄바꿈 금지 */
+          overflow-x: auto;             /* 가로 스크롤 */
+          -webkit-overflow-scrolling: touch;
+          width: 100%;
+          gap: 8px;
+          padding: 6px 0;
+        }
+
+        /* 스크롤바 숨김 (모바일에서 깔끔) */
+        .navbar .nav-links::-webkit-scrollbar{
+          display: none;
+        }
+
+        .navbar .nav-links a{
+          flex: 0 0 auto;               /* 크기 고정 */
+          white-space: nowrap;          /* 글자 줄바꿈 방지 */
+          padding: 10px 14px;
+          border-radius: 999px;         /* pill 형태 */
+          background: rgba(255,255,255,0.12);
+          font-size: 15px;
+        }
+      }
+
+    }
   </style>
 </head>
 <body>
