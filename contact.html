@@ -25,14 +25,24 @@
     }
         
     .title {
-      margin: 0 auto;
-      height: 4cm;
+      width: 100%;
+      max-width: 1200px;        /* navbar 폭과 시각적으로 맞춤 */
+      margin: 0 auto;           /* ⭐ 항상 가운데 */
+      min-height: 4cm;          /* 웹에서 높이 유지 */
       display: flex;
-      margin-left: 14cm;
-      color: rgba(0, 0, 0, 0.767);
       align-items: center;
+      justify-content: center;  /* ⭐ h1 중앙 정렬 */
+      color: rgba(0, 0, 0, 0.77);
       font-family: "Merriweather", serif;
       font-size: larger;
+      text-align: center;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 42px;          /* 웹 기본 */
+      font-weight: 400;
+      letter-spacing: 0.04em;
     }
 
     .content {
@@ -264,8 +274,20 @@
         }
       }
 
+      @media (max-width: 768px) {
+        .title {
+          min-height: auto;
+          padding: 20px 16px;
+        }
+
+        .title h1 {
+          font-size: clamp(24px, 7vw, 36px);
+          line-height: 1.15;
+        }
+      }
+
     }
-    
+
   </style>
 </head>
 <body>
