@@ -251,6 +251,22 @@
         }
       }
 
+      @media (max-width: 768px) {
+      .title {
+        margin-left: 0;         /* 14cm 고정 제거 */
+        height: auto;           /* 4cm 고정 제거 */
+        padding: 18px 16px;
+        justify-content: center; /* 가운데 정렬 */
+        text-align: center;
+      }
+
+      .title h1 {
+        margin: 0;
+        font-size: clamp(24px, 7vw, 40px);
+        line-height: 1.15;
+        }
+      }
+
     }
   </style>
 </head>
